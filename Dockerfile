@@ -10,7 +10,6 @@ RUN cat tilemill/package.json | sed 's/"carto": ".*$/"carto": "https\:\/\/github
 RUN rm tilemill/package.json 
 RUN mv tilemill/tmp.json tilemill/package.json 
 RUN npm install /tilemill/
-#RUN npm install -g https://github.com/gisce/carto/archive/extends_zoom_level.tar.gz
 
 RUN echo '{"server":true,"listenHost": "0.0.0.0"}' > /etc/tilemillconfig.json
 CMD /node_modules/tilemill/index.js start --config=/etc/tilemillconfig.json
