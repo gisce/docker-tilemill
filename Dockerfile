@@ -15,6 +15,6 @@ RUN apt-get update
 RUN apt-get -y upgrade
 
 RUN echo '{"server":true,"listenHost": "0.0.0.0"}' > /etc/tilemillconfig.json
-CMD /usr/share/tilemill/index.js start --config=/etc/tilemillconfig.json
+CMD /tilemill/index.js start --config=/etc/tilemillconfig.json
 EXPOSE 20009
 EXPOSE 20008
