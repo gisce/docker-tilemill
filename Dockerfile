@@ -6,8 +6,8 @@ RUN apt-get -y upgrade
 RUN apt-get -y install nodejs-legacy npm git
 
 RUN git clone https://github.com/mapbox/tilemill.git
-RUN cat package.json | sed 's/"carto": ".*$/"carto": "https\:\/\/github.com\/gisce\/carto\/archive\/extends_zoom_level.tar.gz",/g' >tmp.json
-RUN rm package.json && mv tmp.json package.json && rm tmp.json
+RUN cat tilemill/package.json | sed 's/"carto": ".*$/"carto": "https\:\/\/github.com\/gisce\/carto\/archive\/extends_zoom_level.tar.gz",/g' >tilemill/tmp.json
+RUN rm tilemill/package.json && mv tilemill/tmp.json tilemill/package.json && rm tilemill/tmp.json
 RUN npm install tilemill/
 #RUN npm install -g https://github.com/gisce/carto/archive/extends_zoom_level.tar.gz
 
