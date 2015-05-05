@@ -2,4 +2,4 @@
 
 ## Info
 
-This Dockerfile creates a container running Tilemill with maxzoom 30
+This Dockerfile creates a container running Tilemill with maxzoom 25
